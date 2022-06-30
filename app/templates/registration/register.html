@@ -1,0 +1,96 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eule</title>
+</head>
+<body>
+
+   <style>
+        body {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        form {
+            width: 60%;
+            margin: 60px auto;
+            background: #efefef;
+            padding: 60px 120px 80px 120px;
+            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            position: relative;
+            margin: 40px 0px;
+        }
+
+        .label-txt {
+            position: absolute;
+            top: -1.6em;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: rgb(120, 120, 120);
+            transition: ease .3s;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgb(220, 220, 220);
+            font-weight: bold;
+            color: rgb(120, 120, 120);
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: ease .3s;
+        }
+
+        button:hover {
+            background:#EF3B3A ;
+            color: #ffffff;
+	    }
+
+	    .thumbnail {
+            text-align:center 	
+	    }
+
+	    .h1 {
+            text-align:center 	
+	    }
+    </style>
+
+    <form method="POST">
+	    {% csrf_token %}
+        <div class="form">
+             <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"
+                text-align="center" height="10%" width="10%" />
+				<h1>Registro</h1>
+		</div>
+				
+        
+		{{ form.as_p }}
+		<button type="submit">Registrar</button>
+    </form>
+
+</body>
+</html>
