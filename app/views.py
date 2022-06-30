@@ -128,6 +128,8 @@ def relatorio(request):
 
 	total_sub = df_acertos[["subcategoria"]].value_counts()
 	df_acertos = df_acertos.groupby(["subcategoria"]).sum("acerto").reset_index()
+	
+	print(df_acertos)
 
 	context = {
 		'df_acertos': df_acertos,
